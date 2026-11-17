@@ -1,0 +1,18 @@
+{
+	"node": "@oomol-lab/n8n-nodes-pdfcraft.pdfCraft",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Productivity", "Utility"],
+	"resources": {
+		"credentialDocumentation": [
+			{
+				"url": "https://pdfcraft.ai/docs/api/overview"
+			}
+		],
+		"primaryDocumentation": [
+			{
+				"url": "https://pdfcraft.ai/docs"
+			}
+		]
+	}
+}
