@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Publish via GitHub Actions OIDC with npm provenance attestation and `publishConfig.access = "public"`
+
 ## 0.1.0
 
 - Initial release of `@oomol-lab/n8n-nodes-pdfcraft`

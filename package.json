@@ -1,6 +1,6 @@
 {
     "name": "@oomol-lab/n8n-nodes-pdfcraft",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "n8n community node for PDF Craft Cloud API — convert scanned PDFs to Markdown or EPUB and translate PDF/EPUB documents",
     "license": "MIT",
     "homepage": "https://pdfcraft.ai",
@@ -15,16 +15,16 @@
         "type": "git",
         "url": "https://github.com/oomol-lab/n8n-nodes-pdfcraft.git"
     },
-   "scripts": {
-		"build": "n8n-node build",
-		"build:watch": "tsc --watch",
-		"dev": "n8n-node dev",
-		"lint": "n8n-node lint",
-		"lint:fix": "n8n-node lint --fix",
-		"test": "node --test tests/*.test.mjs",
-		"release": "n8n-node release",
-		"prepublishOnly": "n8n-node prerelease"
-	},
+    "scripts": {
+        "build": "n8n-node build",
+        "build:watch": "tsc --watch",
+        "dev": "n8n-node dev",
+        "lint": "n8n-node lint",
+        "lint:fix": "n8n-node lint --fix",
+        "test": "node --test tests/*.test.mjs",
+        "release": "n8n-node release",
+        "prepublishOnly": "n8n-node prerelease"
+    },
     "files": [
         "dist"
     ],
