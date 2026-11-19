@@ -80,6 +80,10 @@ describe('package and credential metadata', () => {
 		const cred = new PdfCraftApi();
 		assert.equal(cred.name, 'pdfCraftApi');
 		assert.equal(cred.authenticate.properties.headers.Authorization, '=Bearer {{$credentials.apiKey}}');
+		assert.equal(
+			cred.authenticate.properties.headers['User-Agent'],
+			`n8n-nodes-pdfcraft/${pkg.version}`,
+		);
 		assert.equal(cred.test.request.url, '/transforms/running/');
 		assert.equal(cred.test.request.method, 'GET');
 	});
@@ -169,6 +173,9 @@ describe('PdfCraft node execution', () => {
 		assert.equal(output[0].length, 1);
 		assert.equal(getCount, 1);
 		assert.equal(authCalls.length, 5);
+		for (const call of authCalls) {
+			assert.equal(call.options.headers?.['User-Agent'], `n8n-nodes-pdfcraft/${pkg.version}`);
+		}
 		assert.equal(httpCalls.length, 2);
 		assert.equal(httpCalls[0].method, 'PUT');
 		assert.equal(httpCalls[1].method, 'GET');

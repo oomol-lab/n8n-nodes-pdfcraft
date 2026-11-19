@@ -6,6 +6,9 @@ import type {
 	INodeExecutionData,
 } from 'n8n-workflow';
 import { NodeApiError, NodeOperationError, sleep } from 'n8n-workflow';
+import packageJson from '../../package.json';
+
+export const PDF_CRAFT_USER_AGENT = `n8n-nodes-pdfcraft/${packageJson.version}`;
 
 export type InputFormat = 'pdf' | 'epub';
 export type OutputFormat = 'markdown' | 'epub' | 'pdf';
@@ -78,6 +81,9 @@ export async function pdfCraftApiRequest<T>(
 	const requestOptions: IHttpRequestOptions = {
 		method,
 		url: `${baseUrl}${path}`,
+		headers: {
+			'User-Agent': PDF_CRAFT_USER_AGENT,
+		},
 		json: true,
 	};
 

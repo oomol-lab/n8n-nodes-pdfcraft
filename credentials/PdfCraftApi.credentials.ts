@@ -5,6 +5,9 @@ import type {
 	Icon,
 	INodeProperties,
 } from 'n8n-workflow';
+import packageJson from '../package.json';
+
+const PDF_CRAFT_USER_AGENT = `n8n-nodes-pdfcraft/${packageJson.version}`;
 
 export class PdfCraftApi implements ICredentialType {
 	name = 'pdfCraftApi';
@@ -48,6 +51,7 @@ export class PdfCraftApi implements ICredentialType {
 		properties: {
 			headers: {
 				Authorization: '=Bearer {{$credentials.apiKey}}',
+				'User-Agent': PDF_CRAFT_USER_AGENT,
 			},
 		},
 	};
