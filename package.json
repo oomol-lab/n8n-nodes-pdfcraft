@@ -1,6 +1,6 @@
 {
     "name": "@oomol-lab/n8n-nodes-pdfcraft",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "description": "n8n community node for PDF Craft Cloud API — convert scanned PDFs to Markdown or EPUB and translate PDF/EPUB documents",
     "license": "MIT",
     "homepage": "https://pdfcraft.ai",

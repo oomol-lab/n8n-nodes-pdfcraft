@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.2
+
+- Send `User-Agent: n8n-nodes-pdfcraft/<version>` header on all PDF Craft API requests and credential checks
+
 ## 0.1.1
 
 - Publish via GitHub Actions OIDC with npm provenance attestation and `publishConfig.access = "public"`
